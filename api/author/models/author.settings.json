@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "name": "author"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "first": {
+      "type": "string"
+    },
+    "last": {
+      "type": "string",
+      "unique": true
+    },
+    "birth": {
+      "type": "date"
+    },
+    "books": {
+      "collection": "book"
+    }
+  }
+}

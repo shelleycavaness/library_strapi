@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "name": "library_user"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "last": {
+      "type": "string",
+      "required": true
+    },
+    "first": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "books_borrowed": {
+      "type": "integer"
+    },
+    "books": {
+      "via": "library_users",
+      "collection": "book",
+      "dominant": true
+    }
+  }
+}
